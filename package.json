@@ -1,13 +1,24 @@
 {
-  "name": "easy-ui",
+  "name": "v-easyui123",
   "version": "1.0.0",
   "description": "基于vue-cli3，参考element-ui封装的一个UI组件库",
   "private": false,
   "author": {
-    "name": "changxuexu"
+    "name": "sanduo"
   },
-  "license": "ISC",
-  "main": "lib/itcast-ui.umd.min.js",
+  "bugs": {
+    "url": "https://github.com/changxuexu/easy-ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:changxuexu/easy-ui.git"
+  },
+  "files": [
+    "packages",
+    "lib"
+  ],
+  "main": "packages/index.js",
+  "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",

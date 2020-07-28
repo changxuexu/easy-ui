@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
-// 导入全部组件库
-import HmUI from '../packages'
+
+import HmUI from 'v-easyui123'
 Vue.use(HmUI)
 
-// import HmUI from '../packages'
-// let { Button, Switch } = HmUI
-// Vue.use(Button).use(Switch)
+// import { Button, Switch } from 'v-easyui123'
+// Vue.use(Button)
+// Vue.use(Switch)
 
-// import { install } from '../packages'
-// Vue.use(install)
+// 导入全部组件库
+// import HmUI from '../packages'
+// Vue.use(HmUI)
 
 // import { Button, Switch } from '../packages'
 // Vue.use(Button).use(Switch)

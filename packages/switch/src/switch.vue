@@ -1,11 +1,6 @@
 <template>
   <div class="hm-switch" @click="handleChange" :class="{ 'is-checked': this.value }">
-    <input
-      class="hm-switch__input"
-      type="checkbox"
-      ref="input"
-      :name="name"
-    >
+    <input class="hm-switch__input" type="checkbox" ref="input" :name="name" />
     <span class="hm-switch__core" ref="core">
       <span class="hm-switch__button"></span>
     </span>
@@ -90,14 +85,14 @@ export default {
     box-sizing: border-box;
     background: #dcdfe6;
     cursor: pointer;
-    transition: border-color .3s,background-color .3s;
+    transition: border-color 0.3s, background-color 0.3s;
     vertical-align: middle;
     .hm-switch__button {
       position: absolute;
       top: 1px;
       left: 1px;
       border-radius: 100%;
-      transition: all .3s;
+      transition: all 0.3s;
       width: 16px;
       height: 16px;
       background-color: #fff;

@@ -3,6 +3,11 @@
   搭建一个按需加载的组件库要点：
     组件独立打包：单个文件对应单个组件
     引入 代码转换 的插件
+  
+  https://cloud.tencent.com/developer/article/1613301
+
+  cnpm i v-easyui123
+
 ```
 
 
