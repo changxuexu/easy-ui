@@ -1,5 +1,9 @@
 <template>
   <div class="hm-input" :class="{'hm-input--suffix': showSuffix}">
+    <!-- 
+      如果传了showPassword，判断是否需要切换密码的显示，如果不传，不判断 
+      :type="showPassword ? (passwordVisible ? 'text':'password'): type"
+    -->
     <input
       class="hm-input__inner"
       :class="{'is-disabled': disabled}"
@@ -8,13 +12,15 @@
       :disabled="disabled"
       :value="value"
       @input="handleInput"
-    >
+    />
     <span class="hm-input__suffix" v-if="showSuffix">
-      <i v-if="clearable && this.value"
+      <i
+        v-if="clearable && this.value"
         class="hm-input__icon el-icon-circle-close hm-input__clear"
         @click="clear"
       ></i>
-      <i v-if="showPassword"
+      <i
+        v-if="showPassword"
         class="hm-input__icon el-icon-view hm-input__clear"
         @click="handlePasswordVisible"
       ></i>
@@ -54,6 +60,7 @@ export default {
     }
   },
   computed: {
+    // 有一个就显示小图标
     showSuffix () {
       return this.clearable || this.showPassword
     }
@@ -63,7 +70,6 @@ export default {
       this.$emit('input', e.target.value)
     },
     clear () {
-      // console.log('123')
       this.$emit('input', '')
     },
     handlePasswordVisible () {
@@ -94,7 +100,7 @@ export default {
     line-height: 40px;
     outline: none;
     padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     width: 100%;
 
     &:focus {
@@ -108,7 +114,6 @@ export default {
       cursor: not-allowed;
     }
   }
-
 }
 
 .hm-input--suffix {
@@ -123,15 +128,14 @@ export default {
     line-height: 40px;
     text-align: center;
     color: #c0c4cc;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: 900;
     i {
       color: #c0c4cc;
       font-size: 14px;
       cursor: pointer;
-      transition: color .2s cubic-bezier(.645,.045,.355,1);
+      transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
   }
 }
-
 </style>

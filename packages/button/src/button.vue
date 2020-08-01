@@ -15,7 +15,10 @@
   >
     <!-- 字体图标的支持 -->
     <i :class="icon" v-if="icon"></i>
-    <span><slot></slot></span>
+    <!-- 如果没有传入内容插槽不显示 -->
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
   </button>
 </template>
 
@@ -217,5 +220,4 @@ export default {
     padding: 12px;
   }
 }
-
 </style>

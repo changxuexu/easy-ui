@@ -30,7 +30,7 @@ export default {
   },
   mounted () {
     this.$refs.input.checked = this.value
-    // 设置背景色
+    // 设置背景色-默认值
     this.setBackgroundColor()
   },
   methods: {

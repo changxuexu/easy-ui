@@ -6,8 +6,8 @@
   font-display: inline;
   font-style: normal;
 }
-
-[class^="el-icon-"], [class*=" el-icon-"] {
+// 存在el-icon-的样式名都包含此样式
+[class^="el-icon-"], [class*="el-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'element-icons' !important;
   // speak: none;

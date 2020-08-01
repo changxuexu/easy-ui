@@ -3,6 +3,7 @@
     <div class="hm-dialog__wrapper" v-show="visible" @click.self="handleClose">
       <div class="hm-dialog" :style="{width: width, marginTop: top}">
         <div class="hm-dialog__header">
+          <!--技巧：不传显示span,传slot整体被替换 -->
           <slot name="title">
             <span class="hm-dialog__title">{{title}}</span>
           </slot>
@@ -14,6 +15,7 @@
           <!-- 默认插槽 -->
           <slot></slot>
         </div>
+        <!-- $slots.footer存在才显示底部 -->
         <div class="hm-dialog__footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
@@ -67,14 +69,14 @@ export default {
   overflow: auto;
   margin: 0;
   z-index: 2001;
-  background-color: rgba(0,0,0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 
   .hm-dialog {
     position: relative;
     margin: 15vh auto 50px;
     background: #fff;
     border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     width: 30%;
 
@@ -119,11 +121,11 @@ export default {
 }
 
 .dialog-fade-enter-active {
-  animation: dialog-fade-in .4s;
+  animation: dialog-fade-in 0.4s;
 }
 
 .dialog-fade-leave-active {
-  animation: dialog-fade-out .4s;
+  animation: dialog-fade-out 0.4s;
 }
 
 @keyframes dialog-fade-in {
@@ -147,5 +149,4 @@ export default {
     opacity: 0;
   }
 }
-
 </style>

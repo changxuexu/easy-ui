@@ -2,22 +2,21 @@
   <label class="hm-checkbox">
     <span class="hm-checkbox__input">
       <span class="hm-checkbox__inner"></span>
-      <input type="checkbox" class="hm-checkbox__original">
+      <input type="checkbox" class="hm-checkbox__original" />
     </span>
     <span class="hm-checkbox__label" v-if="$slots.default">
       <slot></slot>
     </span>
   </label>
-
 </template>
 
 <script>
 export default {
-  name: 'HmCheckbox',
+  name: "HmCheckbox",
   props: {
     label: {
       type: String,
-      default: ''
+      default: ""
     },
     checked: Boolean
   }
@@ -53,7 +52,8 @@ export default {
       height: 14px;
       background-color: #fff;
       z-index: 1;
-      transition: border-color .25s cubic-bezier(.71,-.46,.29,1.46),background-color .25s cubic-bezier(.71,-.46,.29,1.46);
+      transition: border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46),
+        background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
       &:after {
         box-sizing: content-box;
         content: "";
@@ -66,7 +66,7 @@ export default {
         top: 1px;
         transform: rotate(45deg) scaleY(0);
         width: 3px;
-        transition: transform .15s ease-in .05s;
+        transition: transform 0.15s ease-in 0.05s;
         transform-origin: center;
       }
     }
