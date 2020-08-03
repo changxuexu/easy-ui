@@ -1,6 +1,6 @@
 #基于 vue-cli4，参考 element-ui 封装的一个 UI 组件库
 
-```js
+<pre>
 v-easyui123组件使用：
   安装：
     cnpm i v-easyui123 --save
@@ -15,9 +15,9 @@ v-easyui123组件使用：
     按需加载
       import { Switch } from "v-easyui123";
       Vue.use(Switch);
-```
 
-```js
+
+
   编写组件涉及知识点： 
     1.vue基础语法 
     2.组件基本语法
@@ -74,4 +74,4 @@ v-easyui123组件使用：
         子组件： 
           props值必须为value props: { value: { type: Number, default: 100 }
           this.$emit('input', zoom) //事件名必须为input 
-```
+</pre>
