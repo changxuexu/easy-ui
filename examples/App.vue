@@ -1,7 +1,8 @@
 <template>
   <div>
     <div>测试页面</div>
-    <test></test>
+    <hm-switch v-model="active"></hm-switch>
+    <!-- <test></test> -->
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 export default {
   data () {
     return {
+      active: true
     }
   },
   components: {
