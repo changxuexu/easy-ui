@@ -1,6 +1,6 @@
 #基于 vue-cli4，参考 element-ui 封装的一个 UI 组件库
 
-```html
+```js
 v-easyui123组件使用：
   安装：
     cnpm i v-easyui123 --save
@@ -17,7 +17,7 @@ v-easyui123组件使用：
       Vue.use(Switch);
 ```
 
-```html
+```js
   编写组件涉及知识点： 
     1.vue基础语法 
     2.组件基本语法
