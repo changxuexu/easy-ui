@@ -1,32 +1,27 @@
 <template>
-    <div>
-        <!-- <test-button></test-button> -->
-        <!-- <test-dialog></test-dialog> -->
-        <!-- <test-table></test-table> -->
-        <test-radio></test-radio>
-    </div>
+  <div>
+    <div>测试页面</div>
+    <test></test>
+  </div>
 </template>
 
 <script>
-// TestDialog
-import TestButton from "./TestButton"
-import TestDialog from "./TestDialog"
-import TestTable from "./TestTable"
-import TestRadio from "./TestRadio"
 export default {
-    components: {
-        TestButton,
-        TestTable,
-        TestRadio
+  data () {
+    return {
     }
+  },
+  components: {
+    test: () => import('./test')
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .row {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 .hm-button {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 </style>

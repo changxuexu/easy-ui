@@ -1,25 +1,62 @@
 <template>
-  <label class="hm-checkbox">
+  <label class="hm-checkbox" :class="{'is-checked':isChecked}">
     <span class="hm-checkbox__input">
       <span class="hm-checkbox__inner"></span>
-      <input type="checkbox" class="hm-checkbox__original" />
+      <input
+        :name="name"
+        :value="label"
+        v-model="model"
+        type="checkbox"
+        class="hm-checkbox__original"
+      />
     </span>
-    <span class="hm-checkbox__label" v-if="$slots.default">
+    <!-- v-if="$slots.default" -->
+    <span class="hm-checkbox__label">
       <slot></slot>
+      <template v-if="!$slots.default">{{label}}</template>
     </span>
   </label>
 </template>
 
 <script>
+// 存在问题group中不使用label报错
 export default {
   name: "HmCheckbox",
+  inject: {
+    CheckboxGroup: {
+      default: ''
+    }
+  },
+  computed: {
+    isGroup () {
+      return !!this.CheckboxGroup
+    },
+    model: {
+      get () {
+        return this.isGroup ? this.CheckboxGroup.value : this.value
+      },
+      set (value) {
+        this.isGroup ? this.CheckboxGroup.$emit('input', value) : this.$emit('input', value)
+      }
+    },
+    isChecked () {
+      return this.isGroup ? this.model.includes(this.label) : this.model
+    }
+  },
   props: {
-    label: {
+    value: {
+      type: [Boolean, String],
+      default: ""
+    },
+    name: {
       type: String,
       default: ""
     },
-    checked: Boolean
-  }
+    label: {
+      type: String,
+      default: "",
+    }
+  },
 }
 </script>
 
@@ -85,6 +122,18 @@ export default {
     padding-left: 10px;
     line-height: 19px;
     font-size: 14px;
+  }
+}
+
+.hm-checkbox.is-checked {
+  .hm-checkbox__input {
+    .hm-checkbox__inner {
+      background-color: #409eff;
+      border-color: #409eff;
+      &::after {
+        transform: rotate(45deg) scaleY(1);
+      }
+    }
   }
 }
 </style>
