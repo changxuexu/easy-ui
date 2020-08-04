@@ -20,10 +20,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row {
-  padding: 10px 0;
-}
-.hm-button {
-  margin-left: 10px;
-}
 </style>

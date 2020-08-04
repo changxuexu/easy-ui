@@ -73,6 +73,12 @@ const devConfig = {
       filename: "index.html"
     }
   },
+  css: {
+    modules: true,
+    sourceMap: true,
+    extract: true,
+    requireModuleExtension: true
+  },
   chainWebpack: config => {
     // 扩展 webpack 配置，使 packages 加入编译
     config.module

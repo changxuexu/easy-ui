@@ -7,8 +7,6 @@ public/
 vue.config.js
 babel.config.js
 *.map
-
 .prettierrc.js
 .eslintrc.js
-
 README.md

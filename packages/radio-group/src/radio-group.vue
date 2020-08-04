@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "hmRadioGroup",
-  provide() {
+  provide () {
     return {
       RadioGroup: this
     }
@@ -15,7 +15,7 @@ export default {
   props: {
     value: null
   },
-  data() {
+  data () {
     return {}
   },
 
@@ -23,4 +23,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang='scss' scoped>
+@import "./css/index.scss";
+</style>

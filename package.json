@@ -1,6 +1,6 @@
 {
   "name": "v-easyui123",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "基于vue-cli3，参考element-ui封装的一个UI组件库",
   "private": false,
   "author": {
@@ -17,7 +17,7 @@
     "packages",
     "lib"
   ],
-  "main": "packages/index.js",
+  "main": "lib/index/index.js",
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "core-js": "^3.4.3",
-    "v-easyui123": "^1.0.1",
+    "v-easyui123": "^1.0.3",
     "vue": "^2.6.10"
   },
   "devDependencies": {

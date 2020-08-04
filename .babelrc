@@ -1,0 +1,12 @@
+{
+  // "plugins": [
+  //   // "transform-runtime",
+  //   [
+  //     "import",
+  //     {
+  //       "libraryName": "v-easyui123",
+  //       "style": true
+  //     }
+  //   ]
+  // ]
+}
