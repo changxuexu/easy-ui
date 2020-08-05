@@ -47,8 +47,10 @@ v-easyui123组件使用：
     "build": "vue-cli-service build"
     "lib":"vue-cli-service build --target lib packages/index.js"
 
+    ！！！注意：在本工程中babel.config.js测试按需加载时，npm run dev编译时chainWebpack选项与configureWebpack选项注意去掉
+
   参考文档：
-    vue-cli3.0/4.0
+    vue-cli4.0
       https://www.mk2048.com/blog/blog_hjb00j1a01cbb.html
       https://www.jb51.net/article/186015.htm
       

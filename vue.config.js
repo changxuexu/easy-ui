@@ -6,22 +6,6 @@ function resolve (dir) {
   return path.resolve(__dirname, dir)
 }
 
-// function getEntries (path) {
-//   let files = fs.readdirSync(resolve(path));
-//   const entries = files.reduce((ret, item) => {
-//     const itemPath = join(path, item)
-//     const isDir = fs.statSync(itemPath).isDirectory();
-//     if (isDir) {
-//       ret[item] = resolve(join(itemPath, 'index.js'))
-//     } else {
-//       const [name] = item.split('.')
-//       ret[name] = resolve(`${itemPath}`)
-//     }
-//     return ret
-//   }, {})
-//   return entries
-// }
-
 /**
  * 判断刚路径是否含有index.js
  * @param {String} dir 
@@ -73,12 +57,6 @@ const devConfig = {
       filename: "index.html"
     }
   },
-  css: {
-    modules: true,
-    sourceMap: true,
-    extract: true,
-    requireModuleExtension: true
-  },
   chainWebpack: config => {
     // 扩展 webpack 配置，使 packages 加入编译
     config.module
@@ -114,11 +92,11 @@ const buildConfig = {
   },
   configureWebpack: {
     entry: {
-      // ...getEntries('packages'),
       ...entrys
     },
     output: {
       filename: '[name]/index.js',
+      //配置为commonjs2，入口文件的返回值将分配给module.exports对象，使其组件库在webpack构建的环境下使用，这个是关键。
       libraryTarget: 'commonjs2',
     }
   },

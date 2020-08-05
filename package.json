@@ -26,22 +26,23 @@
     "lib": "vue-cli-service build --target lib --dest lib packages/index.js"
   },
   "dependencies": {
-    "core-js": "^3.4.3",
-    "v-easyui123": "^1.0.3",
-    "vue": "^2.6.10"
+    "core-js": "^3.6.5",
+		"vue": "^2.6.11",
+    "v-easyui123": "^1.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
+		"@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.3",
+		"babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
