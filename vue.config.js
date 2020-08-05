@@ -57,26 +57,26 @@ const devConfig = {
       filename: "index.html"
     }
   },
-  chainWebpack: config => {
-    // 扩展 webpack 配置，使 packages 加入编译
-    config.module
-      .rule("js")
-      .include.add(path.resolve(__dirname, "packages"))
-      .end()
-      .use("babel")
-      .loader("babel-loader")
-      .tap(options => {
-        return options
-      })
-  },
-  configureWebpack: {
-    resolve: {
-      extensions: ['.js', '.vue', '.json'],
-      alias: {
-        '@': resolve('packages')
-      }
-    }
-  }
+  // chainWebpack: config => {
+  //   // 扩展 webpack 配置，使 packages 加入编译
+  //   config.module
+  //     .rule("js")
+  //     .include.add(path.resolve(__dirname, "packages"))
+  //     .end()
+  //     .use("babel")
+  //     .loader("babel-loader")
+  //     .tap(options => {
+  //       return options
+  //     })
+  // },
+  // configureWebpack: {
+  //   resolve: {
+  //     extensions: ['.js', '.vue', '.json'],
+  //     alias: {
+  //       '@': resolve('packages')
+  //     }
+  //   }
+  // }
 }
 
 //生成环境配置

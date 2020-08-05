@@ -8,6 +8,7 @@ module.exports = {
       {
         // 按需加载使用时配置如下
         libraryName: "v-easyui123",
+        libraryDirectory: "lib",
         style: (name) => {
           console.log('style-->>', name)
           // v-easyui123/lib/switch/index.js
@@ -17,6 +18,7 @@ module.exports = {
         },
         customName: (name) => {
           console.log('customName-->>', name)
+					//console.log(xxx) //用于编译调试
           return `v-easyui123/lib/${name}/index.js`
         }
       }
